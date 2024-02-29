@@ -4,6 +4,7 @@ import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button, DropdownItem, Dropdown, DropdownMenu, DropdownTrigger} from "@nextui-org/react";
 import {ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale} from "./Icons1.jsx";
 import {AcmeLogo} from "./AcmeLogo.jsx";
+import { useRouter } from "next/navigation.js";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -20,6 +21,11 @@ export default function App() {
     "Help & Feedback",
     "Log Out",
   ];
+
+  const router = useRouter();
+  const ServicesRoute = () => {
+	  router.push('/services');
+	};
 
   const icons = {
     chevron: <ChevronDown fill="currentColor" size={16} height={undefined} width={undefined} />,
@@ -60,7 +66,9 @@ export default function App() {
 
 		<Dropdown>
           <NavbarItem>
-            <DropdownTrigger>
+
+			{/* hidden on mobile */}
+        <DropdownTrigger className="hidden lg:flex">			  
               <Button
                 disableRipple
                 className="p-0 bg-transparent data-[hover=true]:bg-transparent"
@@ -73,16 +81,19 @@ export default function App() {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu
+
             aria-label="ACME features"
             className="w-[340px]"
             itemClasses={{
               base: "gap-4",
             }}
+            
           >
             <DropdownItem 
               key="autoscaling"
               description="ACME scales apps to meet user demand, automagically, based on load."
               startContent={icons.scale}
+              onClick={ServicesRoute}
             >
               Autoscaling
             </DropdownItem>
