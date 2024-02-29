@@ -24,6 +24,7 @@ export default function App() {
 
   const router = useRouter();
   const ServicesRoute = () => {
+	  // Navigating to the '/another-page' route
 	  router.push('/services');
 	};
 
