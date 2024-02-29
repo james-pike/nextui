@@ -46,9 +46,7 @@ export default function RootLayout({
 							{children}
 						</main>
 
-						<main className="container mx-auto max-w-7xl pt-16 px-2 flex-grow">
-							{children}
-						</main>
+						
 						
 						<footer className="w-full flex items-center justify-center py-3">
 							<Link
@@ -58,7 +56,7 @@ export default function RootLayout({
 								title="nextui.org homepage"
 							>
 								<span className="text-default-600">Powered by</span>
-								<p className="text-primary">NextUI</p>
+								<p className="text-primary">Webdev.ca</p>
 							</Link>
 						</footer>
 					</div>
