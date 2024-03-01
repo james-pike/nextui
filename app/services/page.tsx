@@ -1,5 +1,4 @@
 import { TracingBeam } from "@/components/tracing-beam";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 export default function ServicesPage() {
 	return (
@@ -38,8 +37,6 @@ export default function ServicesPage() {
       </div>
   </div>
 </section>
-
-<ThemeSwitcher/>
 
 </TracingBeam>
 
