@@ -36,7 +36,7 @@ export default function ServicesPage() {
 
        
 <div>
-<ImagesSlider className="h-[40rem]" images={images}>
+<ImagesSlider className="h-[20rem]" images={images}>
       <motion.div
         initial={{
           opacity: 0,
@@ -52,7 +52,7 @@ export default function ServicesPage() {
         className="z-50 flex flex-col justify-center items-center"
       >
         <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
-          The hero section slideshow <br /> nobody asked for
+          The hero slider <br /> nobody asked for
         </motion.p>
         <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
           <span>Join now →</span>
@@ -76,8 +76,8 @@ export default function ServicesPage() {
     </div> */}
     
     
-<TracingBeam className="max-w-full">
-<section className="bg-white dark:bg-gray-900 lg:-mt-10">
+
+<section className="bg-white dark:bg-gray-900">
   <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div className="text-center text-gray-900">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 lg:text-5xl dark:text-white">Turn collaboration into innovation</h2>
@@ -164,8 +164,7 @@ export default function ServicesPage() {
       </section>
 
       
- 
-      </TracingBeam>
+
 
       <section className="bg-white dark:bg-gray-900">
     <div className="max-w-screen-xl px-4 py-8 mx-auto lg:py-16"/>

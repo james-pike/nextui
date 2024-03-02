@@ -54,6 +54,7 @@ export default function App() {
 
   return (
     <Navbar
+    
     maxWidth="full"
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
@@ -112,11 +113,13 @@ export default function App() {
 
       <NavbarContent justify="end" className="items-center">
   {/* Dark/Light mode toggle */}
-  <ThemeSwitcher/>
+ 
  
 </NavbarContent>
 
       <NavbarContent justify="end">
+        <div className="hidden lg:block"><ThemeSwitcher/></div>
+      
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
         </NavbarItem>
@@ -130,6 +133,7 @@ export default function App() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <NavbarMenu>
+ 
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={index} isActive={path === item.route}>
               <Link
@@ -147,9 +151,15 @@ export default function App() {
               >
                 {item.name}
               </Link>
+              
             </NavbarMenuItem>
+            
+            
           ))}
+
+<ThemeSwitcher></ThemeSwitcher>
         </NavbarMenu>
+        
       )}
     </Navbar>
   );
