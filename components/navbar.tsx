@@ -19,10 +19,14 @@ import {
 import { ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale } from "./Icons1.jsx";
 import { AcmeLogo } from "./AcmeLogo.jsx";
 import { usePathname } from "next/navigation.js";
+import { FiSun, FiMoon } from "react-icons/fi";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const path = usePathname();
+
 
   const menuItems = [
     { name: "Home", route: "/" },
@@ -50,6 +54,7 @@ export default function App() {
 
   return (
     <Navbar
+    maxWidth="full"
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
       shouldHideOnScroll
@@ -78,7 +83,9 @@ export default function App() {
         />
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold text-inherit">Webdev Studio</p>
+          <Link href="/">
+          <p className="font-bold text-white text-inherit">Webdev Studio</p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -102,6 +109,12 @@ export default function App() {
           </NavbarItem>
         ))}
       </NavbarContent>
+
+      <NavbarContent justify="end" className="items-center">
+  {/* Dark/Light mode toggle */}
+  <ThemeSwitcher/>
+ 
+</NavbarContent>
 
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
