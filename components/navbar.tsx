@@ -84,7 +84,7 @@ export default function App() {
         <NavbarBrand>
           <AcmeLogo />
           <Link href="/">
-          <p className="font-bold text-white text-inherit">Webdev Studio</p>
+          <p className="font-bold text-white text-inherit">Digital Art & Restoration</p>
           </Link>
         </NavbarBrand>
       </NavbarContent>
