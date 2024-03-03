@@ -105,14 +105,14 @@ export default function App() {
 </NavbarContent>
 
       <NavbarContent justify="end">
-        <div className=""><ThemeSwitcher/></div>
+        <div className="hidden lg:block"><ThemeSwitcher/></div>
       
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
-            Contact
+            Sign In
           </Button>
         </NavbarItem>
       </NavbarContent>
