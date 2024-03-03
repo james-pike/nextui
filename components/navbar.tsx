@@ -19,6 +19,10 @@ import {
 import { AcmeLogo } from "./AcmeLogo.jsx";
 import { usePathname } from "next/navigation.js";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import LoginButton from "./loginButton";
+import { useAuth0 } from "@auth0/auth0-react";
+import LogoutButton from "./logoutbutton";
+import {Avatar} from "@nextui-org/react";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,6 +42,8 @@ export default function App() {
   const handleMenuItemClick = () => {
     setIsMenuOpen(false); // Close the mobile menu when a menu item is clicked
   };
+
+    const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
 
 
   return (
@@ -98,7 +104,7 @@ export default function App() {
         ))}
       </NavbarContent>
 
-      <NavbarContent justify="end" className="items-center">
+      <NavbarContent justify="center" className="items-center">
 
  
  
@@ -107,13 +113,17 @@ export default function App() {
       <NavbarContent justify="end">
         <div className="hidden lg:block"><ThemeSwitcher/></div>
       
-        <NavbarItem className="hidden lg:flex">
+        {/* <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
-        </NavbarItem>
+        </NavbarItem> */}
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+         {isAuthenticated == false ? 
+          <LoginButton/>
+          :
+          <Avatar isBordered radius="sm" color="primary" src="https://i.pravatar.cc/150?u=a04258a2462d826712d" />}
+          {/* <Button as={Link} color="primary" href="#" variant="flat">
             Sign In
-          </Button>
+          </Button> */}
         </NavbarItem>
       </NavbarContent>
 
@@ -127,8 +137,6 @@ export default function App() {
                 color={
                   path == item.route ?
                      "primary"
-                    : index === menuItems.length - 1
-                    ? "danger"
                     : "foreground"
                 }
                 className="w-full"
@@ -138,10 +146,7 @@ export default function App() {
               >
                 {item.name}
               </Link>
-              
             </NavbarMenuItem>
-            
-            
           ))}
 
 <ThemeSwitcher></ThemeSwitcher>
