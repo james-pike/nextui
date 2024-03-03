@@ -16,16 +16,16 @@ export function Providers({ children, themeProps }: ProvidersProps) {
   const router = useRouter();
 
   return (
-    <Auth0Provider
-      domain="dev-g3fxhe78xxn2i0nq.us.auth0.com"
-      clientId="xHd9fuiyiFikVKgqItInPiiWmv5DaQmI"
-      authorizationParams={{
-        redirect_uri: window.location.origin
-      }}
-    >
+    // <Auth0Provider
+    //   domain="dev-g3fxhe78xxn2i0nq.us.auth0.com"
+    //   clientId="xHd9fuiyiFikVKgqItInPiiWmv5DaQmI"
+    //   authorizationParams={{
+    //     redirect_uri: window.location.origin
+    //   }}
+    // >
       <NextUIProvider navigate={router.push}>
         <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
       </NextUIProvider>
-    </Auth0Provider>
+    // </Auth0Provider>
   );
 }
