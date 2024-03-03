@@ -20,9 +20,10 @@ export function ThemeSwitcher() {
 	
     <div>
 		 <Button
+     isIconOnly
     variant="flat"
     onClick={() => theme == 'dark' ? setTheme('light') : setTheme('dark')}
-    className="flex items-center gap-2 px-3 py-2 bg-transparent rounded-md text-white hover:bg-gray-600 transition-colors duration-300"
+    className="flex items-center gap-2 px-3 py-2 rounded-md text-black dark:text-white hover:bg-gray-300 transition-colors duration-300"
   >
     {theme == 'dark' ? <FiSun /> : <FiMoon />}
  

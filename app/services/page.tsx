@@ -1,8 +1,5 @@
 'use client'
 
-import { LampDemo } from "@/components/lamp";
-import { TracingBeam } from "@/components/tracing-beam";
-import { TypewriterEffectSmooth } from "@/components/typewriter";
 import { ImagesSlider } from "@/components/heroslider";
 import { motion } from "framer-motion";
 
@@ -12,24 +9,6 @@ const images = [
     "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
 
-const words = [
-    {
-      text: "Build",
-    },
-    {
-      text: "awesome",
-    },
-    {
-      text: "apps",
-    },
-    {
-      text: "with",
-    },
-    {
-      text: "Aceternity.",
-      className: "text-blue-500 dark:text-blue-500",
-    },
-  ];
 
 export default function ServicesPage() {
 	return (
