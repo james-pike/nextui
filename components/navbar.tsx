@@ -118,7 +118,10 @@ export default function App() {
         </NavbarItem> */}
         <NavbarItem>
          {isAuthenticated == false ? 
-          <LoginButton/>
+          // <LoginButton/>
+          <Button as={Link} color="primary" href="#" variant="flat">
+            Sign In
+          </Button> 
           :
           <Avatar isBordered radius="sm" color="primary" src="https://i.pravatar.cc/150?u=a04258a2462d826712d" />}
           {/* <Button as={Link} color="primary" href="#" variant="flat">
