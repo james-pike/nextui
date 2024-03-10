@@ -2,8 +2,6 @@
 
 import { TypewriterEffectSmooth } from "@/components/typewriter";
 import { Typewriter } from 'react-simple-typewriter'
-import { Boxes } from "../components/background-boxes";
-import { cn } from "@nextui-org/react";
 
 
 
@@ -76,17 +74,7 @@ export default function Home() {
 		</div>
 
 		</section>
-		<div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
-      <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
- 
-      <Boxes />
-      <h1 className={cn("md:text-4xl text-xl text-white relative z-20")}>
-        Tailwind is Awesome
-      </h1>
-      <p className="text-center mt-2 text-neutral-300 relative z-20">
-        Framer motion is the best animation library ngl
-      </p>
-    </div>
+
 		
 		<section className="bg-white dark:bg-gray-900">
   <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
