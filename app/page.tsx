@@ -2,6 +2,7 @@
 
 import { TypewriterEffectSmooth } from "@/components/typewriter";
 import { Typewriter } from 'react-simple-typewriter'
+import ServicesPage from "./services/page";
 
 
 
@@ -67,7 +68,11 @@ export default function Home() {
       </h1>
       </p>
     </div>
+
+	
     </div>
+
+
 
 	
 
