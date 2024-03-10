@@ -97,7 +97,7 @@ export default function App() {
 
        
       </NavbarContent>
-<div className="hidden lg:block">
+      <div className="hidden lg:block">
       <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
