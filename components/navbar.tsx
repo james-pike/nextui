@@ -72,7 +72,6 @@ export default function App() {
       classNames={{
         item: [
           "flex",
-          
           "relative",
           "h-full",
           "items-center",
@@ -98,7 +97,7 @@ export default function App() {
 
        
       </NavbarContent>
-
+<div className="hidden lg:block">
       <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
@@ -160,6 +159,7 @@ export default function App() {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
+        </div>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {menuItems.map((item, index) => (
