@@ -23,9 +23,6 @@ import LoginButton from "./loginButton";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "./logoutbutton";
 import {ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale} from "./Icons1.jsx";
-
-
-
 import {Avatar} from "@nextui-org/react";
 
 
@@ -44,12 +41,10 @@ export default function App() {
     user: <TagUser className="text-danger" fill="currentColor" size={30} height={undefined} width={undefined} />,
   };
 
-
   const menuItems = [
     { name: "Home", route: "/" },
     { name: "Services", route: "/services" },
     { name: "About", route: "/about" },
- 
     { name: "Portfolio", route: "/portfolio" },
     { name: "Contact", route: "/contact" },
  
