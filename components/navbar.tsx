@@ -120,7 +120,7 @@ export default function App() {
               key="autoscaling"
               description="ACME scales apps to meet user demand, automagically, based on load."
               startContent={icons.scale}
-              href="/webdesign"
+              href="/"
             >
               Autoscaling
             </DropdownItem>
